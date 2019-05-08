@@ -1,0 +1,43 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+
+                <br>
+                <h2>Clinic: {{ cliniques.name }} </h2>
+                <hr>
+            
+                <form action="/update_clinique/{{ cliniques.id_clinique }}" class="col-md-6">
+            
+                    {% csrf_token %}
+            
+                    <label class="form-group" for="name">Name: </label>
+                    <input class="form-control" type="text" name="name" value="{{ cliniques.name }}" placeholder="{{ cliniques.name }}">
+                    <label class="form-group" for="prenom">Description: </label>
+                    <input class="form-control" type="text" name="description" value="{{ cliniques.description }}" placeholder="{{ cliniques.description }}">
+
+                    <label class="form-group" for="email">Adresse: </label>
+                    <input class="form-control" type="text" name="adresse" value="{{ cliniques.adresse }}" placeholder="{{ cliniques.adresse }}">
+            
+                    <label class="form-group" for="password">File: </label>
+                    <input class="form-control" type="File" name="file" value="{{ cliniques.Image }}" placeholder="{{ cliniques.password }}">
+                    <br>
+                    
+                    <input class="btn btn-info" type="submit" value="Update">
+                    <input class="btn btn-danger" type="Reset" value="Annuler">
+
+            
+                </form>
+            
+            
+            </div>
+            </div>
+            
+                               		                            
+
+            
+        
+   
+
+{% endblock content %}

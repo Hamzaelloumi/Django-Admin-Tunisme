@@ -1,0 +1,56 @@
+
+{% extends "Blog/base.html" %}
+{% block content %}
+<div class="content">
+	<div class="container-fluid">
+ 
+ 
+	  <div class="row">
+	  <div class="col-lg-12 col-md-10">
+		  <div class="card">
+			<div class="card-header card-header-info">
+			  <h4 class="card-title">Sanatorium List</h4>
+			  <p class="card-category"></p>
+			</div>
+			<div class="card-body table-responsive">
+			  <table class="table table-hover">
+				<thead class="text-warning">
+					<th>Name</th>
+					<th>Description</th>
+                    <th>Adresse</th>
+                    <th>telephone</th>
+					<th>File</th>
+					<th></th>
+				</thead>
+				<tbody>
+					{% for sanatorium in sanatoriums %}
+
+                    <tr>
+
+						
+                        <td>{{sanatorium.name}}</td>
+                        <td>{{sanatorium.description}}</td>
+                        <td>{{sanatorium.adresse}}</td>
+                        <td>{{sanatorium.telephone}}</td>
+                        <td>{{sanatorium.Image}}</td>
+                        <td>
+							<td><a class="btn btn-info btn-sm" href="/edit_sanatorium/{{ sanatorium.id_sanatorium }}">Edit</a>
+								<a class="btn btn-warning btn-sm" href="/delete_sanatorium/{{ sanatorium.id_sanatorium }}">Delete</a>
+							</td>                        </td>                    
+				{% endfor %}
+
+				  </tr>
+				  <a class="btn btn-info" href="/add_sanatorium/">Add Sanatorium</a>
+
+				 
+				
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+		</div>
+		
+	  </div>
+	</div>
+  </div>
+{% endblock content %}

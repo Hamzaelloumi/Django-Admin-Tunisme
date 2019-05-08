@@ -1,0 +1,42 @@
+
+{% extends "Blog/base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+
+<div class="content">
+        <div class="container-fluid">
+           
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+
+                <form  class="col-md-6">
+            
+                    {% csrf_token %}
+                    <div >
+                    
+                        
+                    <label class="form-group" for="name">First name: </label>
+                    <div style="color:aqua">
+                    <input class="form-control" type="ptext" name="name" value="{{ user.first_name }}"></div>
+                    <label class="form-group" for="name">Last name: </label>
+                    <input class="form-control" type="text" name="name" value="{{ user.last_name }}">
+                    <label class="form-group" for="prenom">Email </label>
+                    <input class="form-control" type="text" name="prenom" value="{{ user.email }}">
+
+            
+                    <label class="form-group" for="password">Password: </label>
+                    <input class="form-control" type="text" name="password" value="{{ user.password }}">
+                    <br>
+                </div>
+                     <div style="text-align:center; margin-top:50px;">
+                    <input class="btn btn-info btn-md" type="submit" value="Update">
+                    <input class="btn btn-warning btn-md" type="Reset" value="Annuler">
+                </div>
+            
+                </form>
+            
+            
+            </div>
+            </div>
+            {% endblock content %}

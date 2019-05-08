@@ -1,0 +1,67 @@
+'(({% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'blog/img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'blog/img/favicon.png' %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Tunisme
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+ 
+  <link href="{% static 'blog/css/material-dashboard.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{% static 'blog/demo/demo.css' %}" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="black" data-image="{% static 'blog/img/sidebar-8.jpg' %}">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->   
+    </div>
+   
+    <div class="main-panel">
+        
+        <!-- Navbar -->
+      
+        <!-- End Navbar -->
+       
+        {% block content %}
+        {% endblock %}
+       
+      </div>
+
+  </div>
+ 
+  <!--   Core JS Files   -->
+  <script src="{% static 'blog/js/core/jquery.min.js' %}"></script>
+  <script src="{% static 'blog/js/core/popper.min.js' %}"></script>
+  <script src="{% static 'blog/js/core/bootstrap-material-design.min.js' %}"></script>
+  <script src="https://unpkg.com/default-passive-events"></script>
+  <script src="{% static 'blog/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--  Google Maps Plugin    -->
+ 
+
+  <script src="{% static 'blog/js/plugins/bootstrap-notify.js' %}"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{% static 'blog/js/material-dashboard.js' %}"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{% static 'blog/demo/demo.js' %}"></script>
+ 
+  
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+    <div class="content">
+        <div class="container-fluid">
+           
+                <h2>Responsable: {{ reponsables.name }} {{ reponsables.prenom }}</h2>
+                <hr>
+            
+                <form action="/update/{{ reponsables.id_responsable }}" class="col-md-6">
+            
+                    {% csrf_token %}
+            
+                    <label class="form-group" for="name">Name: </label>
+                    <input class="form-control" type="text" name="name" value="{{ reponsables.name }}" placeholder="{{ reponsables.name }}">
+                    <label class="form-group" for="prenom">Prenom: </label>
+                    <input class="form-control" type="text" name="prenom" value="{{ reponsables.prenom }}" placeholder="{{ reponsables.prenom }}">
+
+                    <label class="form-group" for="email">Email: </label>
+                    <input class="form-control" type="text" name="email" value="{{ reponsables.email }}" placeholder="{{ reponsables.email }}">
+            
+                    <label class="form-group" for="password">Password: </label>
+                    <input class="form-control" type="text" name="password" value="{{ reponsables.password }}" placeholder="{{ reponsables.password }}">
+                    <br>
+                    <label class="form-group" for="adresse">Adresse: </label>
+                    <input class="form-control" type="text" name="adresse" value="{{ reponsables.adresse }}" placeholder="{{ reponsables.adresse }}">
+                    <br>
+
+                    <input class="btn btn-info" type="submit" value="Update">
+                    <input class="btn btn-danger" type="Reset" value="Annuler">
+
+            
+                </form>
+            
+            
+            </div>
+            </div>
+            
+
+            
+        
+   
+
+{% endblock content %}

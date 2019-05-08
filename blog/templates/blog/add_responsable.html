@@ -1,0 +1,44 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+
+
+
+    <div class="content">
+        <div class="container-fluid">
+    
+    <h2>Add Responsable</h2>
+    <hr>
+
+    <form action="/create" class="col-md-6">
+
+
+                {%  csrf_token %}
+                <label class="form-group" for="name">Name: </label>
+                <input class="form-control" type="text" name="name">
+                <label class="form-group" for="prenom">Prenom: </label>
+                <input class="form-control" type="text" name="prenom">
+
+                <label class="form-group" for="email">Email: </label>
+                <input class="form-control" type="text" name="email">
+        
+                <label class="form-group" for="password">Password: </label>
+                <input class="form-control" type="text" name="password" >
+                <br>
+                <label class="form-group" for="adresse">Adresse: </label>
+                <input class="form-control" type="text" name="adresse">
+                <br><br>
+                <input class="btn btn-info" type="submit" value="Update">
+                <input class="btn btn-danger" type="Reset" value="Annuler">
+
+
+        </form>
+    
+        <br>
+
+
+</div>
+</div>
+
+
+{% endblock content %}

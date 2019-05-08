@@ -1,0 +1,23 @@
+dans urls.py
+""" path('' , .........) empty means the default url 127.0.0.1:8000"""
+
+dans Setting.py : 
+"""Declaration besh django ya3raf el template w bd w blogConfig tel9aha fi dossier blog/app.py"""
+
+
+Tesna3 models w ba3d temshi cmd : python manage.py makemigrations 
+w besh tara code kifash tesna3 el code : python manage.py sqlmigrate "nom app" 00001
+
+
+
+BD : tesna3 model w ba3d ki t3amar lazem : 
+python manage.py shell 
+ --> from "esmdossier".models import "class"
+ besh taffichi eli fel class
+ --> "esmdossier".objects.all() 
+ besh tajouti fel bd : 
+post = "Class"(les attributs exemple  title='hamza', name='elloumi')
+post.save()
+
+
+exit() besh te5rej

@@ -1,0 +1,45 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+
+                <br>
+                <h2>Hote: {{ hotes.name }} </h2>
+                <hr>
+            
+                <form action="/update_hote/{{ hotes.id_hote }}" class="col-md-6">
+            
+                    {% csrf_token %}
+            
+                    <label class="form-group" for="name">Name: </label>
+                    <input class="form-control" type="text" name="name" value="{{ hotes.name }}" placeholder="{{ hotes.name }}">
+                    <label class="form-group" for="prenom">Description: </label>
+                    <input class="form-control" type="text" name="description" value="{{ hotes.description }}" placeholder="{{ hotes.description }}">
+
+                    <label class="form-group" for="email">Adresse: </label>
+                    <input class="form-control" type="text" name="adresse" value="{{ hotes.adresse }}" placeholder="{{ hotes.adresse }}">
+                    <label class="form-group" for="email">Telephone: </label>
+                    <input class="form-control" type="text" name="telephone" value="{{ hotes.telephone }}" placeholder="{{ hotes.adresse }}">
+
+                    <label class="form-group" for="password">File: </label>
+                    <input class="form-control" type="File" name="file" value="{{ hotes.Image }}" placeholder="{{ hotes.password }}">
+                    <br>
+                    
+                    <input class="btn btn-info" type="submit" value="Update">
+                    <input class="btn btn-danger" type="Reset" value="Annuler">
+
+            
+                </form>
+            
+            
+            </div>
+            </div>
+            
+                               		                            
+
+            
+        
+   
+
+{% endblock content %}

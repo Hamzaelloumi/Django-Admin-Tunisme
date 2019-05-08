@@ -1,0 +1,48 @@
+{% extends "Blog/base.html" %}
+{% block content %}
+
+
+
+
+
+<div class="content">
+    <div class="container-fluid">
+    
+    <h2>Add Hote</h2>
+    <hr>
+
+    <form action="/create_hote" class="col-md-6" enctype="multipart/form-data">
+
+
+                {%  csrf_token %}
+                <label class="form-group" for="name">Name: </label>
+                <input class="form-control" type="text" name="name">
+                <label class="form-group" for="prenom">Description: </label>
+                <input class="form-control" type="text" name="description">
+
+                <label class="form-group" for="email">Adresse: </label>
+                <input class="form-control" type="text" name="adresse">
+                <label class="form-group" for="email">Telephone: </label>
+                <input class="form-control" type="text" name="telephone">
+        
+
+        
+                <br>
+                <label class="form-group" for="adresse">File: </label>
+                <input class="form-control" type="file" name="myfile">
+                <br><br>
+                <input class="btn btn-info" type="submit" value="Create">
+                <input class="btn btn-danger" type="Reset" value="Annuler">
+
+
+        </form>
+       
+        <br>
+
+
+</div>
+</div>
+
+</body>
+</html>
+{% endblock content %}
